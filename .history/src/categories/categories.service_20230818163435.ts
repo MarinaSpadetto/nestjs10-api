@@ -5,12 +5,11 @@ import { PrismaService } from 'src/prisma/prisma/prisma.service';
 
 @Injectable()
 export class CategoriesService {
+
   constructor(private prismaService: PrismaService) {}
 
   create(createCategoryDto: CreateCategoryDto) {
-    return this.prismaService.category.create({
-      data: createCategoryDto,
-    });
+    return 'This action adds a new category';
   }
 
   findAll() {
@@ -18,10 +17,10 @@ export class CategoriesService {
   }
 
   findOne(id: number) {
-    return this.prismaService.category.findFirstOrThrow({
+    return this.prismaService.category.findUnique({
       where: {
-        id,
-      },
+        id: id
+      }
     });
   }
 
