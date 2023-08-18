@@ -25,7 +25,7 @@ export class CategoriesService {
     });
   }
 
-  update(id: number, UpdateCategoryDto: UpdateCategoryDto) {
+  update(id: number, updateCategoryDto: UpdateCategoryDto) {
     return this.prismaService.category.update({
       where: { id },
       data: UpdateCategoryDto,
@@ -33,8 +33,6 @@ export class CategoriesService {
   }
 
   remove(id: number) {
-    return this.prismaService.category.delete({
-      where: { id },
-    });
+    return `This action removes a #${id} category`;
   }
 }
