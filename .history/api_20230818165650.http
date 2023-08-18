@@ -12,16 +12,3 @@ Content-Type: application/json
   "nome": "Category supertest",
   "description": "Category supertest"
 }
-
-
-###
-PATCH http://localhost:3000/categories/1
-Content-Type: application/json
-
-{
-  "nome": "Teste",
-  "description": "Teste"
-}
-
-###
-DELETE http://localhost:3000/categories/3

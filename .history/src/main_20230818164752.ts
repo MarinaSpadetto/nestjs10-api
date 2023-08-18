@@ -5,7 +5,7 @@ import { PrismaExceptionFilter } from './exceptions-filters/prisma.excpetion-fil
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
-  app.useGlobalFilters(new PrismaExceptionFilter());
+  app.useGlobalFilters(new PrismaExceptionFilter);
 
   await app.listen(3000);
 }

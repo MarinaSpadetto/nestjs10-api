@@ -5,12 +5,11 @@ import { PrismaService } from 'src/prisma/prisma/prisma.service';
 
 @Injectable()
 export class CategoriesService {
+
   constructor(private prismaService: PrismaService) {}
 
   create(createCategoryDto: CreateCategoryDto) {
-    return this.prismaService.category.create({
-      data: createCategoryDto,
-    });
+    return 'This action adds a new category';
   }
 
   findAll() {
@@ -25,16 +24,11 @@ export class CategoriesService {
     });
   }
 
-  update(id: number, UpdateCategoryDto: UpdateCategoryDto) {
-    return this.prismaService.category.update({
-      where: { id },
-      data: UpdateCategoryDto,
-    });
+  update(id: number, updateCategoryDto: UpdateCategoryDto) {
+    return `This action updates a #${id} category`;
   }
 
   remove(id: number) {
-    return this.prismaService.category.delete({
-      where: { id },
-    });
+    return `This action removes a #${id} category`;
   }
 }
